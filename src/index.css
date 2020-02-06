@@ -1,19 +1,22 @@
 /* Global resets */
-body {font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif; color: #424242; line-height: 1.4; font-size: 12px;}
+body {
+	font-family: 'rooney-sans', Avenir-Book, Calibri, sans-serif;
+	color: #424242;
+	line-height: 1.4;
+	font-size: 12px;
+}
 
 /* Fonts */
 h1 {
-  font-family: "rooney-web", 'AmericanTypewriter', Rockwell, serif;
-  font-size: 2.5em;
-  font-weight: bold;
+	font-family: 'rooney-web', 'AmericanTypewriter', Rockwell, serif;
+	font-size: 2.5em;
+	font-weight: bold;
 }
 
 .container {
-  margin: 2em auto;
-  max-width: 630px;
+	margin: 2em auto;
+	max-width: 630px;
 }
-
-
 
 /* COLORS: 
   blue: #20A1D4;
@@ -27,78 +30,78 @@ h1 {
 /* Tooltip */
 
 .tooltip {
-  color: #FFF;
-  background-color: #424242;
-  padding: 10px 0;
-  border-radius: 4px;
-  width: 250px;
-  margin-bottom: 10px;
-  text-align: center;
+	color: #fff;
+	background-color: #424242;
+	padding: 10px 0;
+	border-radius: 4px;
+	width: 250px;
+	margin-bottom: 10px;
+	text-align: center;
 }
 
 /* Progress bar */
 
 .progressBar_container {
-  position: relative;
-  height: 12px;
-  border-bottom: 1px solid #EAEAEA;
+	position: relative;
+	height: 12px;
+	border-bottom: 1px solid #eaeaea;
 }
 
 .progressBar_bar {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-  /* background-color: #20A1D4; */
-  transition: ease-in-out 0.2s;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	/* background-color: #20A1D4; */
+	transition: ease-in-out 0.2s;
 }
 
 /* Box frame */
 
 .boxFrame {
-  width: 250px;
-  border: 1px solid #EAEAEA;
-  text-align: left;
+	width: 250px;
+	border: 1px solid #eaeaea;
+	text-align: left;
 }
 
 .boxFrame_content {
-  margin: 10px;
+	margin: 10px;
 }
 
 /* Notification */
 
 .notification {
-  border: 1px solid; 
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px 0;
+	border: 1px solid;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px 0;
 }
 
 .notification button {
-  padding-left: 20px;
-  color: #000;
-  border: none;
-  background: none;
-  text-decoration: underline;
+	padding-left: 20px;
+	color: #000;
+	border: none;
+	background: none;
+	text-decoration: underline;
 }
 
 .notification-success {
-  border-color: #1CBC2C;
-  background-color: #dff0d8;
+	border-color: #1cbc2c;
+	background-color: #dff0d8;
 }
 
 /* Other */
 
-input[type="text"] {
-  padding: 11px;
-  border-radius: 5px;
-  border: 1px solid #EAEAEA;
+input[type='text'] {
+	padding: 11px;
+	border-radius: 5px;
+  border: 1px solid #eaeaea;
 }
 
-input[type="submit"] {
-  padding: 12px;
-  background-color: #1CBC2C;
-  border: 0px;
-  color: #FFF;
-  border-radius: 5px;
+input[type='submit'] {
+	padding: 12px;
+	background-color: #1cbc2c;
+	border: 0px;
+	color: #fff;
+	border-radius: 5px;
 }

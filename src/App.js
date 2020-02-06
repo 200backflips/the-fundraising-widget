@@ -8,6 +8,7 @@ function App() {
 	const [formValue, setFormValue] = useState(0);
 	const [percentageOfGoal, setPercentageOfGoal] = useState(75);
 	const [progressBarColor, setProgressBarColor] = useState('#EF5F3C');
+	const [errorMessage, setErrorMessage] = useState('');
 
 	useEffect(() => {
 		const calculatePercentage = () => {
@@ -18,29 +19,54 @@ function App() {
 
 	useEffect(() => {
 		const updateColors = () => {
-			if (percentageOfGoal === 100) {
-				return '#1CBC2C';
+			if (percentageOfGoal < 100) {
+				return '#EF5F3C';
 			}
-			return '#EF5F3C';
+			return '#1CBC2C';
 		};
 		setProgressBarColor(updateColors());
 	}, [percentageOfGoal]);
 
-	const handleInput = e => {
-		if (e.target.value > 0) {
-			setFormValue(e.target.value);
+	const validateInput = e => {
+		let input = e.target.value;
+		setErrorMessage('');
+		if (Number.isInteger(+input)) {
+			return setFormValue(input);
+		} else if (Number.isNaN(+input)) {
+			return setErrorMessage(
+				'You have entered something other than a number. Please try again.'
+			);
+		} else if (!Number.isInteger(+input)) {
+			return setErrorMessage(
+				'Your pledge has to be in whole numbers. Please try again.'
+			);
 		}
 	};
 
 	const handleSubmit = e => {
 		e.preventDefault();
-		setAmountPledged(Number(amountPledged) + Number(formValue));
-		setHasPledged(!hasPledged);
-		e.target.reset();
+		if (formValue >= 1) {
+			setAmountPledged(Number(amountPledged) + Number(formValue));
+			setHasPledged(!hasPledged);
+			e.target.reset();
+		} else {
+			return setErrorMessage(
+				"We're sorry, something went wrong. Please try again."
+			);
+		}
 	};
 
 	const toggleForm = () => {
 		setHasPledged(!hasPledged);
+		setFormValue(0);
+		setErrorMessage('');
+	};
+
+	const setWidth = () => {
+		if (percentageOfGoal < 100) {
+			return percentageOfGoal + '%';
+		}
+		return '100%';
 	};
 
 	return (
@@ -57,7 +83,7 @@ function App() {
 							className="progressBar_bar inProgress"
 							id="fundraise_progressBar"
 							style={{
-								width: percentageOfGoal + '%',
+								width: setWidth(),
 								backgroundColor: progressBarColor
 							}}
 						></div>
@@ -85,7 +111,8 @@ function App() {
 								<input
 									id="fundraise_amount"
 									type="text"
-									onChange={handleInput}
+									autoComplete="off"
+									onChange={validateInput}
 								/>
 								<input
 									type="submit"
@@ -94,6 +121,9 @@ function App() {
 								/>
 							</form>
 						)}
+						<span className={errorMessage && 'error-message'}>
+							{errorMessage}
+						</span>
 					</div>
 				</div>
 			</div>

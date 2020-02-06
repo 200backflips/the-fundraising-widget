@@ -5,3 +5,11 @@
   text-align: center;
   margin: 0 auto;
 }
+
+.error-message {
+  display: block;
+  padding-top: 10px;
+  text-align: center;
+  color: #ff0000;
+  font-style: italic;
+}
