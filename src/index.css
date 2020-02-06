@@ -49,8 +49,8 @@ h1 {
   top: 0px;
   left: 0px;
   bottom: 0px;
-  background-color: #20A1D4;
-  width: 75%;
+  /* background-color: #20A1D4; */
+  transition: ease-in-out 0.2s;
 }
 
 /* Box frame */
@@ -74,9 +74,12 @@ h1 {
   margin: 10px 0;
 }
 
-.notification a {
+.notification button {
   padding-left: 20px;
   color: #000;
+  border: none;
+  background: none;
+  text-decoration: underline;
 }
 
 .notification-success {
@@ -92,7 +95,7 @@ input[type="text"] {
   border: 1px solid #EAEAEA;
 }
 
-button, input[type="submit"] {
+input[type="submit"] {
   padding: 12px;
   background-color: #1CBC2C;
   border: 0px;
