@@ -1,0 +1,13 @@
+.Container {
+	margin: 2em auto;
+	max-width: 630px;
+}
+
+.boxFrame {
+	width: 250px;
+	border: 1px solid #eaeaea;
+	text-align: left;
+}
+.boxFrame_content {
+	margin: 10px;
+}

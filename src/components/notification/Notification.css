@@ -1,0 +1,17 @@
+.Notification {
+	border: 1px solid;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px 0;
+}
+.Notification button {
+	padding-left: 20px;
+	color: #000;
+	border: none;
+	background: none;
+	text-decoration: underline;
+}
+.Notification-success {
+	border-color: #1cbc2c;
+	background-color: #dff0d8;
+}

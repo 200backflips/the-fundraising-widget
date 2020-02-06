@@ -1,0 +1,13 @@
+.ProgressBar-container {
+	position: relative;
+	height: 12px;
+	border-bottom: 1px solid #eaeaea;
+}
+
+.ProgressBar-bar {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	transition: ease-in-out 0.2s;
+}
