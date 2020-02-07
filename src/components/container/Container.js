@@ -14,15 +14,13 @@ export const Container = () => {
 	const [formValue, setFormValue] = useState(0);
 
 	useEffect(() => {
-		setPercentageOfGoal(
-			parseInt((Number(amountPledged) / Number(goalAmount)) * 100)
-		);
+		setPercentageOfGoal(parseInt((+amountPledged / +goalAmount) * 100));
 	}, [amountPledged, goalAmount]);
 
 	const handleSubmit = e => {
 		e.preventDefault();
 		if (formValue >= 1) {
-			setAmountPledged(Number(amountPledged) + Number(formValue));
+			setAmountPledged(+amountPledged + +formValue);
 			setHasPledged(!hasPledged);
 			e.target.reset();
 		}
@@ -44,9 +42,7 @@ export const Container = () => {
 					{hasPledged ? (
 						<Notification toggleForm={toggleForm} />
 					) : (
-						<FundraiseForm
-							props={{ handleSubmit, setFormValue }}
-						/>
+						<FundraiseForm props={{ handleSubmit, setFormValue }} />
 					)}
 				</div>
 			</div>
