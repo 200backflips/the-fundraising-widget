@@ -6,7 +6,7 @@ export const FundraiseForm = ({ props }) => {
   const [errorMessage, setErrorMessage] = useState('');
 
   const validateInput = e => {
-    const input = +e.target.value;
+    const input = Number(e.target.value);
     setErrorMessage('');
     if (Number.isInteger(input)) {
       setFormValue(input);
