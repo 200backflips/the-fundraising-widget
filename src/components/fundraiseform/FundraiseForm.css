@@ -1,21 +1,23 @@
 input[type='text'] {
-	padding: 11px;
-	border-radius: 5px;
-	border: 1px solid #eaeaea;
+  padding: 11px;
+  border-radius: 5px;
+  border: 1px solid #eaeaea;
+  outline: none;
 }
 
 input[type='submit'] {
-	padding: 12px;
-	background-color: #1cbc2c;
-	border: 0px;
-	color: #fff;
-	border-radius: 5px;
+  padding: 12px;
+  background-color: #1cbc2c;
+  border: 0px;
+  color: #fff;
+  border-radius: 5px;
+  outline: none;
 }
 
-.ErrorMessage {
-	display: block;
-	padding-top: 10px;
-	text-align: center;
-	color: #ff0000;
-	font-style: italic;
+.error-message {
+  display: block;
+  padding-top: 10px;
+  text-align: center;
+  color: #ff0000;
+  font-style: italic;
 }
